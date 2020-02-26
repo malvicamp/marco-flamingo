@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css?family=Capriola');
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,700');
+
+
+/* BACKGROUND */
+
+
+body {
+    margin: 0;
+    background: #fff3f2;
+}
+
+.background {
+    background: url(Images/Final%20Digital%20Art.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    margin: 20px 0 0 0;
+    height: 700px;
+    width: 100%;
+    position: fixed;
+}
+
+.element {
+  background: #FF8D8A;
+  position: relative;
+  z-index: 1;
+  height: 900px;
+  top: 900px;
+}
+
+.element:before,
+.element:after {
+    background: inherit;
+    content: '';
+    display: block;
+    height: 50%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    -webkit-backface-visibility: hidden;
+  }
+
+.element:before {
+    top: 0;
+    transform: skewY(5deg);
+    transform-origin: 100% 0;
+  }
+
+.element:after {
+    bottom: 0;
+    transform: skewY(-3deg);
+    transform-origin: 100%;
+  }
+
+
+/* TYPE */
+
+
+h1, h2 {
+    text-align: right;
+    font-family: 'capriola', sans-serif;
+    position: relative;
+    margin: 10px 40px;
+}
+
+h1 {
+    font-size: 6vw;
+    color: #EA635F;
+    margin-top: 50px;
+}
+
+h2 {
+    font-size: 4vw;
+    color: #FF8D8A;
+}
+
+h3 {
+    text-align: center;
+    color: white;
+    font-family: 'capriola', sans-serif;
+    font-size: 42px;
+    position: relative;
+    top: 60px;
+    margin-bottom: 100px;
+}
+
+h4 {
+    font-size: 22px;
+}
+
+h4, p, li {
+    font-family: 'cabin', sans-serif;
+}
+
+.subhead {
+   margin-bottom: 10px; 
+}
+
+.welcome {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin: 150px 40px 0 40px;
+    position: fixed;
+    right: 0;
+    width: 45%;
+}
+
+.bold {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2;
+    color: #54979A;
+}
+
+.centered {
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+.col-6 .rating {
+    text-align: right;
+}
+
+.name ul {
+    padding-left: 5px;
+}
+
+ul {
+    line-height: 1.4;
+    padding-left: 0;
+}
+
+.col-12 p {
+    padding: 0 15px;
+}
+
+/* COLUMNS */
+
+
+.col-6, .col-12 {
+    box-sizing: border-box;
+    float: left;
+    padding: 5px;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.skills {
+    margin-top: 20px;
+}
+
+/* FOOTER & BUTTONS */
+
+
+footer {
+    position: relative;
+    height: 250px;
+    width: 100%;
+    top: 900px;
+    background: #fff3f2;
+    padding: 50px 15px;
+    box-sizing: border-box;
+}
+
+footer p {
+    margin: 50px 0 10px 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#fb span {
+    background: url(Images/fb2.png);
+    height: 50px;
+    width: 30px;
+}
+
+#in span {
+    background: url(Images/in2.png);
+    height: 50px;
+    width: 54px;
+}
+
+#mail span {
+    background: url(Images/mail2.png);
+    height: 50px;
+    width: 70px;
+}
+
+#fb span, 
+#in span,
+#mail span {
+    display: inline-block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+    margin: 0 30px;
+}
+
+#fb span:hover,
+#in span:hover,
+#mail span:hover {
+    background-position: right;
+}
+
+/* MEDIA QUERIES */
+
+
+@media only screen and (max-width: 1000px) {
+    .background {
+        background-size: 1000px;
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    h1 {
+        font-size: 9vw;
+        margin-top: 20px;
+    }
+    h2 {
+        font-size: 5vw;
+    }
+    h1, h2 {
+        text-align: center;
+    }
+    .background {
+        margin-top: 60px;
+        background-image: url(Images/Final%20Digital%20Art_mobile.png);
+        background-size: 400px;
+        background-position: center;
+    }
+    .welcome {
+        position: relative;
+        text-align: center;
+        margin: auto;
+        width: 80%;
+        top: 500px;
+        background-color: rgba(255, 255, 255, 0.76);
+        padding: 15px;
+        font-size: 3vw;
+    }
+     .skills {
+        width: 100%;
+    }
+    .element {
+        height: 1200px;
+    }
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .background {
+        margin-top: 10px;
+    }
+    .welcome {
+        top: 470px;
+        font-size: 3.5vw;
+    }
+    .skills {
+        margin-top: 0;
+    }
+}
